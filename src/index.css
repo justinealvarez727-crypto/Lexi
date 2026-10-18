@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* Linear/Readwise-style minimalism: neutral zinc surfaces, one indigo accent.
+   Dark mode follows the OS (Tailwind v4 default `dark:` = prefers-color-scheme). */
+@layer base {
+  html { @apply bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-indigo-500; }
+}
+@layer components {
+  .btn { @apply inline-flex min-h-11 items-center justify-center rounded-lg border border-zinc-300 px-4 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800; }
+  .btn-primary { @apply border-transparent bg-indigo-600 text-white hover:bg-indigo-500 dark:hover:bg-indigo-500; }
+  .card { @apply rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900; }
+  .muted { @apply text-zinc-600 dark:text-zinc-400; }
+}
